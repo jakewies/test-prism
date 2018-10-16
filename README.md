@@ -1,13 +1,14 @@
 # test-prism
 
-## shell
+## styled
 
-```bash
-$ yarn add flexomatic
+```jsx
+import styled from 'styled-components'
 
-# or
-
-$ npm install flexomatic
+const Button = styled.button`
+  background: palevioletred;
+  color: #fff;
+`
 ```
 
 
