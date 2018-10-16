@@ -1,14 +1,24 @@
 # test-prism
 
-## styled
+```javascript
+document.querySelector('.filter').addEventListener('click', e => {
+  e.stopPropagation()
 
-```jsx
-import styled from 'styled-components'
+  const el = e.target
 
-const Button = styled.button`
-  background: palevioletred;
-  color: #fff;
-`
+  if (el.classList.contains('filter__item') && !el.classList.contains('filter__item--active')) {
+    const filterItemData = el.getBoundingClientRect()
+    const switchData = document.querySelector('.filter__switch').getBoundingClientRect()
+
+    const midPoint = filterItemData.x + (filterItemData.width / 2)
+    const newSwitchX = midPoint - (switchData.width / 2)
+
+    const keyframes = [
+      { transform: `translateX(${switchData.x}px)`},
+      { transform: `translateX(${newSwitchX}px)`}
+    ]
+  }
+})
 ```
 
 
