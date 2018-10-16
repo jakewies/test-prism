@@ -12,15 +12,18 @@
 ## JavaScript & JSX
 
 ```jsx
-// src/components/Button.js
+// a quick example
 
-import React from 'react'
-import { ChatConsumer } from './Chat'
+const { Provider, Consumer } = createContext('red')
 
-const Button = () => (
-  <ChatConsumer>
-    {({ add }) => (/* render Button */)}
-  </ChatConsumer>
+const Blue = () => (
+  <Provider value='blue'>
+    <Consumer>{color => <h1>{color}</h1>}</Consumer>
+  </Provider>
+)
+
+const Red = () => (
+  <Consumer>{color => <h1>{color}</h1>}</Consumer>
 )
 ```
 
