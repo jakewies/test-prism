@@ -53,6 +53,20 @@ class Chat extends Component {
 }
 ```
 
+```jsx
+import { Form } from 'semantic-ui-react'
+
+const Usage = () => (
+  <Form>
+    <Form.Group>
+      <Form.Input />
+      <Form.Select />
+      <Form.Button />
+    </Form.Group>
+  </Form>
+)
+```
+
 ## CSS
 
 ```css
