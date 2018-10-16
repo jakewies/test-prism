@@ -2,7 +2,7 @@
 
 ## shell
 
-```shell
+```bash
 $ yarn add flexomatic
 
 # or
