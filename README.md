@@ -27,7 +27,7 @@ function App() {
 
 ## React
 
-```javascript
+```jsx
 // src/components/Chat.js
 
 class Chat extends Component {
