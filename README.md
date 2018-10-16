@@ -1,5 +1,16 @@
 # test-prism
 
+## shell
+
+```shell
+$ yarn add flexomatic
+
+# or
+
+$ npm install flexomatic
+```
+
+
 ## jsx
 
 ```jsx
