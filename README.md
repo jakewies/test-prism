@@ -11,7 +11,7 @@
 
 ## JavaScript & JSX
 
-```javascript
+```jsx
 function App() {
   return (
     <div className="App">
