@@ -12,20 +12,16 @@
 ## JavaScript & JSX
 
 ```jsx
-// src/components/Chat.js
+// src/components/Button.js
 
-// ...
+import React from 'react'
+import { ChatConsumer } from './Chat'
 
-render() {
-  const { children } = this.props
-
-  return (
-    <ChatContext.Provider>
-      <h1>Chatroom</h1>
-      {children}
-    </ChatContext.Provider>
-  )
-}
+const Button = () => (
+  <ChatConsumer>
+    {({ add }) => (/* render Button */)}
+  </ChatConsumer>
+)
 ```
 
 ## React
