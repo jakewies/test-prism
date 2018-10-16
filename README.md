@@ -11,35 +11,20 @@
 
 ## JavaScript & JSX
 
-```javascript
-// javascript
-
-function App() {
-  return (
-    <div className="App">
-      <Chat>
-        <Chat.Messages />
-        <Chat.Input />
-        <Chat.Button />
-      </Chat>
-    </div>
-  );
-}
-```
-
 ```jsx
-// jsx
+// src/components/Chat.js
 
-function App() {
+// ...
+
+render() {
+  const { children } = this.props
+
   return (
-    <div className="App">
-      <Chat>
-        <Chat.Messages />
-        <Chat.Input />
-        <Chat.Button />
-      </Chat>
-    </div>
-  );
+    <ChatContext.Provider>
+      <h1>Chatroom</h1>
+      {children}
+    </ChatContext.Provider>
+  )
 }
 ```
 
