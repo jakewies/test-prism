@@ -1,30 +1,30 @@
 # test-prism
 
-## html
-
-```html
-<h2 id="look-ma-a-header">
-  <a href="#look-ma-a-header">#</a>
-  Look ma, a header!
-</h2>
-```
-
-## JavaScript & JSX
+## jsx
 
 ```jsx
-// a quick example
+import React from 'react'
+import { Subscribe } from 'unstated'
+import ColorContainer from '../containers/ColorContainer'
+import { Outer, Inner, Button } from './styled'
 
-const { Provider, Consumer } = createContext('red')
-
-const Blue = () => (
-  <Provider value='blue'>
-    <Consumer>{color => <h1>{color}</h1>}</Consumer>
-  </Provider>
+const App = () => (
+  <Subscribe to={[ColorContainer]}>
+    {color => {
+      const active = color.active()
+      return (
+        <Outer bg={active}>
+          <Inner>
+            <h1>{active}</h1>
+            <Button onClick={color.make}>Another one!</Button>
+          </Inner>
+        </Outer>
+      )
+    }}
+  </Subscribe>
 )
 
-const Red = () => (
-  <Consumer>{color => <h1>{color}</h1>}</Consumer>
-)
+export default App
 ```
 
 ## React
